@@ -30,6 +30,7 @@ class Twoots {
 	public function edit_twoot($id, $twoot_data){
 		$date = new DateTime();
 		$twoot_data['date'] = $date->format('d/m/Y H:i:s');
+		$twoot_data['id'] = $id;
 		$_SESSION['twoots'][$id] = $twoot_data;
 	}
 

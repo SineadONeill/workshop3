@@ -34,6 +34,12 @@ class Twotter extends CI_Controller {
 		$this->load->view('edit', $data);
 	}
 
+	public function save_edit($id){
+		$twoot_data = array('msg'=>$this->input->post('twoot'));
+		$this->twoots->edit_twoot($id, $twoot_data);
+		redirect('/twotter/');
+}
+
 	public function delete($id) {
 		$this->twoots->delete_twoot($id);
 		redirect('/twotter/');

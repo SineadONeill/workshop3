@@ -15,6 +15,11 @@
 <body>
 <div id="frame">
   <div class="title">Edit Twoot #<?=$id?></div>
+<form action="/twotter/save_edit/<?=$id?>" method="post">
+<textarea name="twoot"><?=$twoot['msg']?></textarea>
+<br />
+<input type="Submit">
+</form>
   <div><?=$twoot['msg']?></div>
 </div>
 </body>
